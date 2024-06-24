@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #1c1c1c;
+    --shadow-dark: #141414;
+    --shadow-light: #242424;
+    --text-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--primary-color);
+    box-shadow: 20px 20px 60px var(--shadow-dark), -20px -20px 60px var(--shadow-light);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.color-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+}
+
+#green {
+    background-color: #00ff00;
+}
+
+#red {
+    background-color: #ff0000;
+}
+
+#yellow {
+    background-color: #ffff00;
+}
+
+#blue {
+    background-color: #0000ff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+}
+
+button:hover {
+    box-shadow:  4px 4px 8px var(--shadow-dark),  -4px -4px 8px var(--shadow-light);
+}
+
+#message {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Active class for the color animation */
+.active {
+    filter: brightness(50%);
+}
+
+    #colorPicker {
+        margin-top: 20px;
+        padding: 5px;
+        border: none;
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+        box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+        cursor: pointer;
+    }
